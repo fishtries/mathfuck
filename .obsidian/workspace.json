@@ -11,14 +11,10 @@
             "id": "49efe4528038435e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Математический анализ/3 семестр/Лекция 3 12.09.25.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Лекция 3 12.09.25"
+              "title": "New tab"
             }
           }
         ]
@@ -113,12 +109,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Математический анализ/3 семестр/!!!.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from !!!"
+              "title": "Outgoing links"
             }
           },
           {
@@ -142,13 +137,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Математический анализ/3 семестр/Лекция 3 12.09.25.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Лекция 3 12.09.25"
+              "title": "Outline"
             }
           },
           {
@@ -181,8 +175,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "17d4e6b568959293",
+  "active": "49efe4528038435e",
   "lastOpenFiles": [
+    "Математический анализ/3 семестр/Лекция 3 16.09.25.md",
+    "Математический анализ/3 семестр/Лекция 3 12.09.25.md",
+    "Математический анализ/3 семестр/Untitled.md",
     "git/Математический анализ/3 семестр/медиа/Лекция 2 рис 1.md",
     "git/Математический анализ/3 семестр/медиа",
     "git/Математический анализ/3 семестр/Лекция 3 12.09.25.md",
@@ -193,7 +190,6 @@
     "git/Математический анализ",
     "git",
     "Математический анализ/3 семестр/Лекция 2 11.09.25.md",
-    "Математический анализ/3 семестр/Лекция 3 12.09.25.md",
     "Математический анализ/3 семестр/Лекция 1 02.09.25.md",
     "Лекция.md",
     "Математический анализ/3 семестр/медиа/Лекция 2 рис 1.md",
