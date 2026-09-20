@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <style>
+      .bg { fill: #131722; }
+      .card { fill: #1e2433; stroke: #334155; stroke-width: 1.5; rx: 8; }
+      .title { font-family: 'DejaVu Sans', sans-serif; font-size: 19px; font-weight: bold; fill: #f8fafc; }
+      .subtitle { font-family: 'DejaVu Sans', sans-serif; font-size: 13px; fill: #94a3b8; }
+      .card-title { font-family: 'DejaVu Sans', sans-serif; font-size: 15px; font-weight: bold; }
+      .label { font-family: 'DejaVu Sans', sans-serif; font-size: 12.5px; fill: #e2e8f0; }
+      .label-sm { font-family: 'DejaVu Sans', sans-serif; font-size: 11.5px; fill: #94a3b8; }
+      .math { font-family: 'DejaVu Serif', serif; font-style: italic; font-size: 14.5px; fill: #ffffff; }
+      .math-sm { font-family: 'DejaVu Serif', serif; font-style: italic; font-size: 12px; fill: #cbd5e1; }
+      .math-bold { font-family: 'DejaVu Serif', serif; font-weight: bold; font-size: 15px; fill: #ffffff; }
+      .axis { stroke: #64748b; stroke-width: 2; }
+      .tick { stroke: #64748b; stroke-width: 1.5; }
+      .v-point { fill: #ec4899; stroke: #f472b6; stroke-width: 1.5; }
+      .shift-1 { fill: #38bdf8; stroke: #0284c7; stroke-width: 1.5; }
+      .shift-2 { fill: #34d399; stroke: #059669; stroke-width: 1.5; }
+      .shift-3 { fill: #fbbf24; stroke: #d97706; stroke-width: 1.5; }
+      .badge-pink { fill: #831843; stroke: #db2777; stroke-width: 1; rx: 6; }
+      .badge-blue { fill: #0c4a6e; stroke: #0284c7; stroke-width: 1; rx: 6; }
+      .badge-green { fill: #064e3b; stroke: #059669; stroke-width: 1; rx: 6; }
+      .badge-amber { fill: #78350f; stroke: #d97706; stroke-width: 1; rx: 6; }
+    </style>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="600" class="bg" rx="12"/>
+
+  <!-- Top Title -->
+  <text x="35" y="36" class="title">Конструкция множества Витали и его рациональных сдвигов</text>
+  <text x="35" y="58" class="subtitle">Пример множества, неизмеримого относительно счётно-аддитивной сдвиг-инвариантной меры Лебега</text>
+
+  <!-- Left Card: Equivalence Classes & Choice -->
+  <rect x="30" y="78" width="460" height="275" class="card"/>
+  <text x="45" y="105" class="card-title" style="fill: #ec4899;">1. Факторизация отрезка [0; 1] по ℝ/ℚ</text>
+  <text x="45" y="128" class="label">Отношение эквивалентности на [0; 1]:</text>
+  <text x="120" y="152" class="math-bold" style="font-size: 16px; fill: #f472b6;">x ~ y  ⇔  x - y ∈ ℚ</text>
+
+  <text x="45" y="180" class="label">Отрезок распадается на несчётное число дизъюнктных классов:</text>
+  <text x="55" y="202" class="math" style="fill: #e2e8f0; font-size: 14px;">[0; 1] = ⨆_α C_α,   каждый класс C_α счётный и плотный</text>
+
+  <!-- Choice Axiom Box -->
+  <rect x="45" y="220" width="430" height="115" class="badge-pink"/>
+  <text x="58" y="242" class="math-bold" style="fill: #fbcfe8;">Аксиома выбора (ZFC):</text>
+  <text x="58" y="263" class="label" style="fill: #fdf2f8; font-size: 12px;">Из каждого класса C_α выбираем ровно по одной точке v_α ∈ [0; 1]:</text>
+  <text x="80" y="290" class="math-bold" style="font-size: 15px; fill: #ffffff;">V = { v_α }_α ⊂ [0; 1]</text><text x="255" y="290" class="card-title" style="fill: #f472b6; font-size: 13px;">— Множество Витали</text>
+  <text x="58" y="318" class="label-sm" style="fill: #fbcfe8;">В каждом C_α ровно один представитель, разности v_i - v_j ∉ ℚ</text>
+
+  <!-- Right Card: Disjoint Shifts & Double Inclusion -->
+  <rect x="510" y="78" width="460" height="275" class="card"/>
+  <text x="525" y="105" class="card-title" style="fill: #38bdf8;">2. Счётное семейство сдвигов  Q = [-1; 1] ∩ ℚ</text>
+  
+  <!-- Property 1 -->
+  <rect x="525" y="122" width="430" height="60" class="badge-blue"/>
+  <text x="535" y="141" class="label" style="font-weight: bold; fill: #bae6fd;">(i) Попарная дизъюнктность при q₁ ≠ q₂:</text>
+  <text x="535" y="160" class="math-sm" style="fill: #e0f2fe;">(V + q₁) ∩ (V + q₂) = ∅</text>
+  <text x="535" y="174" class="label-sm" style="fill: #7dd3fc;">(иначе v₁ + q₁ = v₂ + q₂ ⇒ v₁ - v₂ = q₂ - q₁ ∈ ℚ ⇒ v₁ = v₂)</text>
+
+  <!-- Property 2 -->
+  <rect x="525" y="190" width="430" height="52" class="badge-green"/>
+  <text x="535" y="209" class="label" style="font-weight: bold; fill: #a7f3d0;">(ii) Двойное включение на числовой оси:</text>
+  <text x="535" y="230" class="math-sm" style="fill: #ecfdf5; font-size: 13px;">[0; 1] ⊂ ⨆_{q ∈ Q} (V + q) ⊂ [-1; 2]</text>
+
+  <!-- Contradiction note -->
+  <rect x="525" y="250" width="430" height="85" class="badge-amber"/>
+  <text x="535" y="269" class="label" style="font-weight: bold; fill: #fde68a;">(iii) Неизмеримость по Лебегу (противоречие):</text>
+  <text x="535" y="290" class="math-sm" style="fill: #fffbeb;">1 = μ([0; 1]) ≤ ∑_{q ∈ Q} μ(V + q) = ∑_{q ∈ Q} μ(V) ≤ 3</text>
+  <text x="535" y="310" class="label-sm" style="fill: #fed7aa;">• Если μ(V) = 0 ⇒ сумма равна 0  (противоречие 1 ≤ 0)</text>
+  <text x="535" y="325" class="label-sm" style="fill: #fed7aa;">• Если μ(V) &gt; 0 ⇒ сумма равна +∞ (противоречие +∞ ≤ 3)</text>
+
+  <!-- Bottom Panel: Visual Real Line Diagram -->
+  <rect x="30" y="368" width="940" height="210" class="card"/>
+  <text x="45" y="394" class="card-title" style="fill: #f8fafc;">3. Геометрическая схема покрытия на числовой прямой ℝ</text>
+
+  <!-- Number axis -->
+  <!-- Coordinates: -1 at x=130, 0 at x=360, 1 at x=590, 2 at x=820 -->
+  <line x1="70" y1="475" x2="900" y2="475" class="axis" marker-end="url(#axis-arrow)"/>
+  <text x="910" y="480" class="math-bold" style="font-size: 16px;">ℝ</text>
+
+  <!-- Segment [-1; 2] container bracket -->
+  <rect x="130" y="445" width="690" height="48" style="fill: rgba(148, 163, 184, 0.08); stroke: #475569; stroke-width: 1; rx: 4;"/>
+  <text x="420" y="437" class="label-sm" style="fill: #94a3b8;">Объемлющий отрезок [-1; 2],   длина = 3</text>
+
+  <!-- Segment [0; 1] highlighted -->
+  <rect x="360" y="454" width="230" height="32" style="fill: rgba(59, 130, 246, 0.25); stroke: #3b82f6; stroke-width: 2; rx: 3;"/>
+  <text x="430" y="505" class="math-bold" style="fill: #60a5fa;">[0; 1],  длина = 1</text>
+
+  <!-- Ticks -->
+  <!-- -1 -->
+  <line x1="130" y1="468" x2="130" y2="482" class="tick" style="stroke-width: 2; stroke: #f8fafc;"/>
+  <text x="122" y="502" class="math-bold">-1</text>
+
+  <!-- 0 -->
+  <line x1="360" y1="465" x2="360" y2="485" class="tick" style="stroke-width: 2.5; stroke: #60a5fa;"/>
+  <text x="355" y="502" class="math-bold" style="fill: #60a5fa;">0</text>
+
+  <!-- 1 -->
+  <line x1="590" y1="465" x2="590" y2="485" class="tick" style="stroke-width: 2.5; stroke: #60a5fa;"/>
+  <text x="585" y="502" class="math-bold" style="fill: #60a5fa;">1</text>
+
+  <!-- 2 -->
+  <line x1="820" y1="468" x2="820" y2="482" class="tick" style="stroke-width: 2; stroke: #f8fafc;"/>
+  <text x="815" y="502" class="math-bold">2</text>
+
+  <!-- Points of V (pink dots inside [0; 1]) -->
+  <g>
+    <circle cx="380" cy="470" r="4.5" class="v-point"/>
+    <circle cx="415" cy="470" r="4.5" class="v-point"/>
+    <circle cx="450" cy="470" r="4.5" class="v-point"/>
+    <circle cx="495" cy="470" r="4.5" class="v-point"/>
+    <circle cx="535" cy="470" r="4.5" class="v-point"/>
+    <circle cx="570" cy="470" r="4.5" class="v-point"/>
+    <text x="460" y="450" class="math-bold" style="fill: #f472b6;">V</text>
+  </g>
+
+  <!-- Shift V + q1 (blue, e.g. q1 = 0.45) -->
+  <g>
+    <circle cx="485" cy="470" r="3.5" class="shift-1"/>
+    <circle cx="520" cy="470" r="3.5" class="shift-1"/>
+    <circle cx="555" cy="470" r="3.5" class="shift-1"/>
+    <circle cx="600" cy="470" r="3.5" class="shift-1"/>
+    <circle cx="640" cy="470" r="3.5" class="shift-1"/>
+    <circle cx="675" cy="470" r="3.5" class="shift-1"/>
+    <text x="620" y="450" class="math-sm" style="fill: #38bdf8;">V + q₁</text>
+  </g>
+
+  <!-- Shift V + q2 (green, e.g. q2 = -0.55) -->
+  <g>
+    <circle cx="225" cy="470" r="3.5" class="shift-2"/>
+    <circle cx="260" cy="470" r="3.5" class="shift-2"/>
+    <circle cx="295" cy="470" r="3.5" class="shift-2"/>
+    <circle cx="340" cy="470" r="3.5" class="shift-2"/>
+    <circle cx="380" cy="470" r="3.5" class="shift-2"/>
+    <circle cx="415" cy="470" r="3.5" class="shift-2"/>
+    <text x="245" y="450" class="math-sm" style="fill: #34d399;">V + q₂</text>
+  </g>
+
+  <!-- Shift V + q3 (amber, e.g. q3 = 0.85) -->
+  <g>
+    <circle cx="585" cy="470" r="3.5" class="shift-3"/>
+    <circle cx="620" cy="470" r="3.5" class="shift-3"/>
+    <circle cx="655" cy="470" r="3.5" class="shift-3"/>
+    <circle cx="700" cy="470" r="3.5" class="shift-3"/>
+    <circle cx="740" cy="470" r="3.5" class="shift-3"/>
+    <circle cx="775" cy="470" r="3.5" class="shift-3"/>
+    <text x="735" y="450" class="math-sm" style="fill: #fbbf24;">V + q₃</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 545)">
+    <circle cx="15" cy="15" r="4.5" class="v-point"/>
+    <text x="26" y="19" class="label-sm" style="fill: #f472b6;">Точки V</text>
+
+    <circle cx="110" cy="15" r="3.5" class="shift-2"/>
+    <text x="121" y="19" class="label-sm" style="fill: #34d399;">V + q₂ (q₂ &lt; 0)</text>
+
+    <circle cx="240" cy="15" r="3.5" class="shift-1"/>
+    <text x="251" y="19" class="label-sm" style="fill: #38bdf8;">V + q₁ (q₁ &gt; 0)</text>
+
+    <circle cx="370" cy="15" r="3.5" class="shift-3"/>
+    <text x="381" y="19" class="label-sm" style="fill: #fbbf24;">V + q₃ (q₃ → 1)</text>
+
+    <text x="510" y="19" class="label-sm" style="font-weight: bold; fill: #f87171;">Все сдвиги попарно дизъюнктны и вместе покрывают [0; 1]</text>
+  </g>
+</svg>

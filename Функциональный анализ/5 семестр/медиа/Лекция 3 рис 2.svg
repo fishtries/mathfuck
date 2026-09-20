@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580">
+  <defs>
+    <style>
+      .bg { fill: #131722; }
+      .card { fill: #1e2433; stroke: #334155; stroke-width: 1.5; rx: 8; }
+      .title { font-family: 'DejaVu Sans', sans-serif; font-size: 19px; font-weight: bold; fill: #f8fafc; }
+      .subtitle { font-family: 'DejaVu Sans', sans-serif; font-size: 13px; fill: #94a3b8; }
+      .card-title { font-family: 'DejaVu Sans', sans-serif; font-size: 14.5px; font-weight: bold; }
+      .label { font-family: 'DejaVu Sans', sans-serif; font-size: 12.5px; fill: #e2e8f0; }
+      .label-sm { font-family: 'DejaVu Sans', sans-serif; font-size: 11.5px; fill: #94a3b8; }
+      .math { font-family: 'DejaVu Serif', serif; font-style: italic; font-size: 14.5px; fill: #ffffff; }
+      .math-sm { font-family: 'DejaVu Serif', serif; font-style: italic; font-size: 12.5px; fill: #cbd5e1; }
+      .math-bold { font-family: 'DejaVu Serif', serif; font-weight: bold; font-size: 14.5px; fill: #ffffff; }
+      .axis { stroke: #64748b; stroke-width: 2; marker-end: url(#arrow-head); }
+      .proj-line { stroke: #818cf8; stroke-width: 1.2; stroke-dasharray: 4,4; }
+      .preimage-rect { fill: rgba(16, 185, 129, 0.3); stroke: #10b981; stroke-width: 2; rx: 3; }
+      .y-band { fill: rgba(59, 130, 246, 0.15); stroke: #3b82f6; stroke-width: 1; stroke-dasharray: 5,4; }
+      .badge-indigo { fill: #1e1b4b; stroke: #6366f1; stroke-width: 1; rx: 4; }
+    </style>
+    <marker id="arrow-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="580" class="bg" rx="12"/>
+
+  <!-- Header -->
+  <text x="35" y="36" class="title">Геометрический смысл измеримой функции и эквивалентные прообразы</text>
+  <text x="35" y="58" class="subtitle">Функция f : A → ℝ измерима ⇔ прообраз любого промежутка или луча является измеримым множеством</text>
+
+  <!-- Left Panel: Graph & Preimage -->
+  <rect x="30" y="78" width="510" height="475" class="card"/>
+  <text x="45" y="105" class="card-title" style="fill: #60a5fa;">Прообраз полосы f⁻¹((a; b)) = { x ∈ A : a &lt; f(x) &lt; b }</text>
+
+  <!-- Coordinate system -->
+  <line x1="60" y1="465" x2="510" y2="465" class="axis"/>
+  <text x="500" y="490" class="math-bold">x</text>
+
+  <line x1="90" y1="485" x2="90" y2="125" class="axis"/>
+  <text x="70" y="135" class="math-bold">y</text>
+
+  <!-- Band on Y: (a, b) -->
+  <rect x="90" y="200" width="410" height="120" class="y-band"/>
+  <line x1="85" y1="200" x2="95" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="205" class="math-bold" style="fill: #60a5fa;">b</text>
+
+  <line x1="85" y1="320" x2="95" y2="320" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="325" class="math-bold" style="fill: #60a5fa;">a</text>
+
+  <text x="425" y="265" class="label-sm" style="fill: #93c5fd;">Полоса (a; b)</text>
+
+  <!-- Curve y = f(x) -->
+  <path d="M 100 420 C 140 380, 160 160, 220 170 C 270 180, 290 390, 360 380 C 420 370, 440 160, 485 150" 
+        fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <text x="455" y="140" class="math-bold" style="fill: #f59e0b;">y = f(x)</text>
+
+  <!-- Projections down to X axis -->
+  <line x1="140" y1="320" x2="140" y2="465" class="proj-line"/>
+  <line x1="175" y1="200" x2="175" y2="465" class="proj-line"/>
+  <line x1="260" y1="200" x2="260" y2="465" class="proj-line"/>
+  <line x1="310" y1="320" x2="310" y2="465" class="proj-line"/>
+  <line x1="385" y1="320" x2="385" y2="465" class="proj-line"/>
+  <line x1="440" y1="200" x2="440" y2="465" class="proj-line"/>
+
+  <!-- Preimage blocks on X axis -->
+  <rect x="140" y="457" width="35" height="16" class="preimage-rect"/>
+  <rect x="260" y="457" width="50" height="16" class="preimage-rect"/>
+  <rect x="385" y="457" width="55" height="16" class="preimage-rect"/>
+
+  <!-- Points on curve -->
+  <circle cx="140" cy="320" r="3.5" fill="#3b82f6"/>
+  <circle cx="175" cy="200" r="3.5" fill="#3b82f6"/>
+  <circle cx="260" cy="200" r="3.5" fill="#3b82f6"/>
+  <circle cx="310" cy="320" r="3.5" fill="#3b82f6"/>
+  <circle cx="385" cy="320" r="3.5" fill="#3b82f6"/>
+  <circle cx="440" cy="200" r="3.5" fill="#3b82f6"/>
+
+  <text x="180" y="508" class="math-bold" style="fill: #34d399; font-size: 15px;">f⁻¹((a; b)) = E₁ ∪ E₂ ∪ E₃ ∈ M</text>
+  <text x="150" y="530" class="label-sm">Прообраз полосы — измеримое подмножество области определения A</text>
+
+  <!-- Right Panel: Equivalences Chain -->
+  <rect x="560" y="78" width="410" height="475" class="card"/>
+  <text x="575" y="105" class="card-title" style="fill: #a78bfa;">Цепочка эквивалентных условий (1 ⇔ ... ⇔ 8)</text>
+
+  <g transform="translate(575, 120)">
+    <!-- Item 1 -> 2 -->
+    <rect x="0" y="0" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="18" class="label" style="font-weight: bold; fill: #c7d2fe;">(1 ⇒ 2)  Полуинтервал (a; b]:</text>
+    <text x="10" y="35" class="math-sm">(a; b] = ⋂_{n=1}^∞ (a; b + 1/n)  ⇒  пересечение</text>
+
+    <!-- Item 2 -> 3 -->
+    <rect x="0" y="52" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="70" class="label" style="font-weight: bold; fill: #c7d2fe;">(2 ⇒ 3)  Отрезок [a; b]:</text>
+    <text x="10" y="87" class="math-sm">[a; b] = ⋂_{n=1}^∞ (a - 1/n; b]  ⇒  пересечение</text>
+
+    <!-- Item 3 -> 4 -->
+    <rect x="0" y="104" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="122" class="label" style="font-weight: bold; fill: #c7d2fe;">(3 ⇒ 4)  Полуинтервал [a; b):</text>
+    <text x="10" y="139" class="math-sm">[a; b) = [a; c] ∖ [b; c]  (c &gt; b)  ⇒  разность</text>
+
+    <!-- Item 4 -> 5 -->
+    <rect x="0" y="156" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="174" class="label" style="font-weight: bold; fill: #c7d2fe;">(4 ⇒ 5)  Луч [c; +∞):</text>
+    <text x="10" y="191" class="math-sm">[c; +∞) = ⋃_{n=1}^∞ [c; c + n)  ⇒  объединение</text>
+
+    <!-- Item 5 -> 6 -->
+    <rect x="0" y="208" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="226" class="label" style="font-weight: bold; fill: #c7d2fe;">(5 ⇒ 6)  Открытый луч (c; +∞):</text>
+    <text x="10" y="243" class="math-sm">(c; +∞) = ⋃_{n=1}^∞ [c + 1/n; +∞)  ⇒  объединение</text>
+
+    <!-- Item 6 -> 7 -->
+    <rect x="0" y="260" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="278" class="label" style="font-weight: bold; fill: #c7d2fe;">(6 ⇒ 7)  Луч (-∞; c]:</text>
+    <text x="10" y="295" class="math-sm">(-∞; c] = ℝ ∖ (c; +∞)  ⇒  дополнение (A ∖ f⁻¹)</text>
+
+    <!-- Item 7 -> 8 -->
+    <rect x="0" y="312" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="330" class="label" style="font-weight: bold; fill: #c7d2fe;">(7 ⇒ 8)  Открытый луч (-∞; c):</text>
+    <text x="10" y="347" class="math-sm">(-∞; c) = ⋃_{n=1}^∞ (-∞; c - 1/n]  ⇒  объединение</text>
+
+    <!-- Item 8 -> 1 -->
+    <rect x="0" y="364" width="380" height="45" class="badge-indigo"/>
+    <text x="10" y="382" class="label" style="font-weight: bold; fill: #c7d2fe;">(8 ⇒ 1)  Возврат к интервалу (a; b):</text>
+    <text x="10" y="399" class="math-sm">(a; b) = (-∞; b) ∖ ⋂_{n=1}^∞ (-∞; a + 1/n) ∈ M</text>
+  </g>
+</svg>
